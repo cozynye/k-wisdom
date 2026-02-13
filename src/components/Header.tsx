@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import type { SupportedLanguage } from '@/types/proverb';
 import SettingsModal from './SettingsModal';
@@ -41,10 +42,20 @@ export default function Header() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
-          {/* 서비스명 */}
-          <h1 className="text-lg font-bold text-accent-blue dark:text-blue-400 font-nanum">
-            Daily K-Wisdom
-          </h1>
+          {/* Logo & Title */}
+          <div className="flex items-center gap-3">
+            <Image
+              src="/icons/k-wisdom-icon.png"
+              alt="K-Wisdom Logo"
+              width={40}
+              height={40}
+              className="rounded-lg"
+              priority
+            />
+            <h1 className="text-lg font-bold text-accent-blue dark:text-blue-400 font-nanum">
+              Daily K-Wisdom
+            </h1>
+          </div>
 
           <div className="flex items-center gap-2">
             {/* 언어 전환 드롭다운 - shadcn/ui */}
