@@ -1,5 +1,5 @@
-import proverbsData from '@/../../public/data/proverbs.json';
-import type { Proverb } from '@/types/proverb';
+import proverbsData from "@/../../public/data/proverbs.json";
+import type { Proverb } from "@/types/proverb";
 
 const proverbs = proverbsData as Proverb[];
 
@@ -7,7 +7,11 @@ export function getTodayProverb(): Proverb {
   const today = new Date();
 
   // 자정(00:00) 기준으로 날짜 계산
-  const startOfDay = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  const startOfDay = new Date(
+    today.getFullYear(),
+    today.getMonth(),
+    today.getDate()
+  );
 
   // 연도 시작부터의 일수 계산
   const startOfYear = new Date(today.getFullYear(), 0, 0);
@@ -21,7 +25,7 @@ export function getTodayProverb(): Proverb {
 }
 
 export function getProverbById(id: number): Proverb | undefined {
-  return proverbs.find(p => p.id === id);
+  return proverbs.find((p) => p.id === id);
 }
 
 export function getAllProverbs(): Proverb[] {

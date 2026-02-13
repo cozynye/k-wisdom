@@ -6,19 +6,13 @@ import { Button } from '@/components/ui/button';
 interface AudioButtonProps {
   text: string;
   lang?: string;
-  onWordChange?: (wordIndex: number) => void;
 }
 
-export default function AudioButton({ text, lang = 'ko-KR', onWordChange }: AudioButtonProps) {
+export default function AudioButton({ text, lang = 'ko-KR' }: AudioButtonProps) {
   const { speak, isSpeaking } = useTTS();
 
   const handleClick = () => {
-    speak(text, lang, {
-      onWordChange,
-      onComplete: () => {
-        onWordChange?.(-1); // 재생 완료 시 하이라이트 제거
-      },
-    });
+    speak(text, lang);
   };
 
   return (

@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useMemo } from 'react';
 import type { Proverb } from '@/types/proverb';
 import AudioButton from './AudioButton';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -12,12 +11,6 @@ interface DailyQuoteProps {
 export default function DailyQuote({ proverb }: DailyQuoteProps) {
   const { language } = useLanguage();
   const translation = proverb.translations[language];
-  const [highlightedWordIndex, setHighlightedWordIndex] = useState(-1);
-
-  // 텍스트를 단어/음절 단위로 분리
-  const words = useMemo(() => {
-    return proverb.source.text.split(/(\s+|[,.!?;:])/g).filter(word => word.trim().length > 0);
-  }, [proverb.source.text]);
 
   return (
     <div className="fade-in space-y-8">
@@ -50,23 +43,9 @@ export default function DailyQuote({ proverb }: DailyQuoteProps) {
           <div className="relative text-center mb-8 space-y-4">
             <div className="flex items-center justify-center gap-4 flex-wrap">
               <h2 className="text-3xl md:text-4xl font-bold font-nanum text-gray-900 dark:text-white leading-relaxed tracking-tight">
-                {words.map((word, index) => (
-                  <span
-                    key={index}
-                    className={`transition-all duration-200 ${
-                      highlightedWordIndex === index
-                        ? 'bg-gradient-to-r from-neon-pink to-electric-purple bg-clip-text text-transparent scale-110 inline-block'
-                        : ''
-                    }`}
-                  >
-                    {word}
-                  </span>
-                ))}
+                {proverb.source.text}
               </h2>
-              <AudioButton
-                text={proverb.source.text}
-                onWordChange={setHighlightedWordIndex}
-              />
+              <AudioButton text={proverb.source.text} />
             </div>
             <p className="text-sm font-body text-gray-500 dark:text-gray-400 tracking-wider">
               {proverb.source.romanization}
