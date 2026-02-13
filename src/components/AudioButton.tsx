@@ -16,16 +16,21 @@ export default function AudioButton({ text, lang = 'ko-KR' }: AudioButtonProps) 
   };
 
   return (
-    <Button
-      onClick={handleClick}
-      size="icon"
-      className={`w-12 h-12 rounded-full bg-accent-red hover:bg-red-700 text-white transition-all shadow-lg active:scale-95 ${
-        isSpeaking ? 'pulse-animation' : ''
-      }`}
-      aria-label="Listen to pronunciation"
-      title="한글 발음 듣기"
-    >
-      <span className="text-2xl">{isSpeaking ? '🔊' : '🔈'}</span>
-    </Button>
+    <div className="relative group">
+      {/* Glow effect */}
+      <div className="absolute -inset-1 bg-gradient-to-r from-neon-pink to-coral rounded-full opacity-0 group-hover:opacity-60 blur-lg transition-opacity duration-300" />
+
+      <Button
+        onClick={handleClick}
+        size="icon"
+        className={`relative w-12 h-12 rounded-full bg-gradient-to-r from-neon-pink to-coral hover:from-coral hover:to-neon-pink text-white border-2 border-neon-pink/30 hover:border-neon-pink transition-all duration-300 shadow-lg shadow-neon-pink/30 hover:shadow-xl hover:shadow-neon-pink/50 active:scale-95 hover:scale-110 ${
+          isSpeaking ? 'animate-pulse' : ''
+        }`}
+        aria-label="Listen to pronunciation"
+        title="한글 발음 듣기"
+      >
+        <span className="text-2xl">{isSpeaking ? '🔊' : '🔈'}</span>
+      </Button>
+    </div>
   );
 }

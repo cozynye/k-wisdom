@@ -40,33 +40,31 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl border-b border-neon-pink/20 dark:border-electric-purple/20 shadow-lg shadow-neon-pink/5 dark:shadow-electric-purple/10">
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
-          {/* Logo & Title */}
-          <div className="flex items-center gap-3">
+          {/* Logo with glow */}
+          <div className="relative group">
+            <div className="absolute -inset-2 bg-gradient-to-r from-neon-pink to-neon-cyan rounded-xl opacity-0 group-hover:opacity-30 blur-lg transition-opacity duration-300" />
             <Image
               src="/icons/k-wisdom-icon.png"
               alt="K-Wisdom Logo"
               width={40}
               height={40}
-              className="rounded-lg"
+              className="relative rounded-xl transition-transform duration-300 group-hover:scale-110"
               priority
             />
-            <h1 className="text-lg font-bold text-accent-blue dark:text-blue-400 font-nanum">
-              Daily K-Wisdom
-            </h1>
           </div>
 
           <div className="flex items-center gap-2">
-            {/* 언어 전환 드롭다운 - shadcn/ui */}
+            {/* Language Dropdown - Modern */}
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1.5 px-3 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none">
-                <span className="text-xl">🌍</span>
-                <span className="text-sm font-semibold text-text-main dark:text-gray-200">
+              <DropdownMenuTrigger className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-neon-pink/10 to-electric-purple/10 hover:from-neon-pink/20 hover:to-electric-purple/20 border border-neon-pink/20 dark:border-electric-purple/30 transition-all duration-300 hover:scale-105 focus:outline-none group">
+                <span className="text-lg">🌍</span>
+                <span className="text-sm font-display font-semibold text-gray-900 dark:text-white">
                   {LANGUAGE_CODES[language]}
                 </span>
                 <svg
-                  className="w-4 h-4 text-text-sub dark:text-gray-400"
+                  className="w-4 h-4 text-gray-600 dark:text-gray-400 group-hover:text-neon-pink dark:group-hover:text-electric-purple transition-colors"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -74,15 +72,15 @@ export default function Header() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-40 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+              <DropdownMenuContent align="end" className="w-44 bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border-neon-pink/20 dark:border-electric-purple/20 shadow-xl">
                 {(Object.keys(LANGUAGE_OPTIONS) as SupportedLanguage[]).map((lang) => (
                   <DropdownMenuItem
                     key={lang}
                     onClick={() => setLanguage(lang)}
-                    className={`cursor-pointer ${
+                    className={`cursor-pointer font-body transition-all ${
                       language === lang
-                        ? 'bg-accent-blue text-white font-semibold'
-                        : 'text-text-main dark:text-gray-200'
+                        ? 'bg-gradient-to-r from-neon-pink to-electric-purple text-white font-semibold'
+                        : 'text-gray-900 dark:text-gray-200 hover:bg-neon-pink/10 dark:hover:bg-electric-purple/10'
                     }`}
                   >
                     <span className="flex items-center justify-between w-full">
@@ -102,15 +100,15 @@ export default function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* 설정 아이콘 */}
+            {/* Settings Button - Modern */}
             <button
               onClick={() => setIsSettingsOpen(true)}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-full bg-gradient-to-r from-neon-pink/10 to-neon-cyan/10 hover:from-neon-pink/20 hover:to-neon-cyan/20 border border-neon-pink/20 dark:border-neon-cyan/30 transition-all duration-300 hover:scale-110 hover:rotate-90 group"
               aria-label="Settings"
               title="설정"
             >
               <svg
-                className="w-6 h-6 text-text-main dark:text-gray-300"
+                className="w-5 h-5 text-gray-900 dark:text-white group-hover:text-neon-pink dark:group-hover:text-neon-cyan transition-colors"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
