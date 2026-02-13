@@ -1,6 +1,7 @@
 'use client';
 
 import { useTTS } from '@/lib/useTTS';
+import { Button } from '@/components/ui/button';
 
 interface AudioButtonProps {
   text: string;
@@ -15,15 +16,16 @@ export default function AudioButton({ text, lang = 'ko-KR' }: AudioButtonProps) 
   };
 
   return (
-    <button
+    <Button
       onClick={handleClick}
-      className={`inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent-red text-white hover:bg-red-700 transition-all ${
+      size="icon"
+      className={`w-12 h-12 rounded-full bg-accent-red hover:bg-red-700 text-white transition-all shadow-lg active:scale-95 ${
         isSpeaking ? 'pulse-animation' : ''
       }`}
       aria-label="Listen to pronunciation"
       title="한글 발음 듣기"
     >
-      <span className="text-xl">{isSpeaking ? '🔊' : '🔈'}</span>
-    </button>
+      <span className="text-2xl">{isSpeaking ? '🔊' : '🔈'}</span>
+    </Button>
   );
 }
