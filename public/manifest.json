@@ -1,0 +1,50 @@
+{
+  "name": "Daily K-Wisdom",
+  "short_name": "K-Wisdom",
+  "description": "매일 만나는 한국의 지혜 - Discover Korean wisdom through daily proverbs",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9F9F9",
+  "theme_color": "#C62828",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["education", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icons/screenshot-mobile.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Today's Wisdom",
+      "short_name": "Today",
+      "description": "View today's Korean proverb",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

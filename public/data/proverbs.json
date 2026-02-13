@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "type": "proverb",
+    "tags": ["speech", "kindness"],
+    "source": {
+      "text": "가는 말이 고와야 오는 말이 곱다.",
+      "romanization": "Ganeun mari gowaya oneun mari gopda.",
+      "author": null
+    },
+    "translations": {
+      "en": {
+        "text": "Nice words for nice words.",
+        "meaning": "If you speak nicely to others, they will speak nicely to you."
+      },
+      "ja": {
+        "text": "行く言葉が美しくてこそ、来る言葉も美しい。",
+        "meaning": "自分が他人に優しく話しかければ、他人も自分に優しく答えてくれる（売り言葉に買い言葉の逆）。"
+      },
+      "zh": {
+        "text": "礼尚往来",
+        "meaning": "你对他好，他也会对你好；相互尊重，相互回报。"
+      },
+      "es": {
+        "text": "A palabras necias, oídos sordos (o bien, Quien da buen trato, buen trato recibe).",
+        "meaning": "Si hablas con amabilidad a los demás, ellos también te responderán amablemente."
+      },
+      "fr": {
+        "text": "Les belles paroles appellent les belles paroles.",
+        "meaning": "Si vous parlez gentiment aux autres, ils vous répondront gentiment."
+      },
+      "id": {
+        "text": "Kata-kata yang baik mendatangkan balasan yang baik pula.",
+        "meaning": "Jika kamu berbicara sopan kepada orang lain, mereka akan berbicara sopan kepadamu."
+      },
+      "th": {
+        "text": "พูดดีเป็นศรีแก่ปาก",
+        "meaning": "ถ้าเราพูดจาไพเราะกับผู้อื่น ผู้อื่นก็จะพูดจาไพเราะกับเรา"
+      },
+      "vi": {
+        "text": "Lời nói chẳng mất tiền mua, lựa lời mà nói cho vừa lòng nhau.",
+        "meaning": "Nếu bạn nói năng nhẹ nhàng với người khác, họ cũng sẽ nhẹ nhàng với bạn."
+      }
+    }
+  },
+  {
+    "id": 2,
+    "type": "proverb",
+    "tags": ["start", "step", "journey"],
+    "source": {
+      "text": "천 리 길도 한 걸음부터.",
+      "romanization": "Cheon ri gildo han georeumbuteo.",
+      "author": null
+    },
+    "translations": {
+      "en": {
+        "text": "Even a journey of a thousand miles begins with a single step.",
+        "meaning": "Great things start from small beginnings."
+      },
+      "ja": {
+        "text": "千里の道も一歩から。",
+        "meaning": "どんなに大きな事業でも、手近なところから始まる。"
+      },
+      "zh": {
+        "text": "千里之行，始于足下。",
+        "meaning": "即使是千里的长途旅行，也是从迈出第一步开始的。"
+      },
+      "es": {
+        "text": "Un viaje de mil millas comienza con el primer paso.",
+        "meaning": "Las grandes cosas comienzan con pequeños comienzos."
+      },
+      "fr": {
+        "text": "Un voyage de mille lieues commence toujours par un premier pas.",
+        "meaning": "Les grandes choses commencent par de petits débuts."
+      },
+      "id": {
+        "text": "Perjalanan seribu mil dimulai dengan satu langkah.",
+        "meaning": "Hal-hal besar dimulai dari awal yang kecil."
+      },
+      "th": {
+        "text": "การเดินทางพันไมล์เริ่มต้นด้วยก้าวแรก",
+        "meaning": "สิ่งยิ่งใหญ่เริ่มต้นจากก้าวเล็กๆ เสมอ"
+      },
+      "vi": {
+        "text": "Đường đi ngàn dặm bắt đầu từ bước đầu tiên.",
+        "meaning": "Những việc lớn lao đều bắt đầu từ những khởi đầu nhỏ bé."
+      }
+    }
+  },
+  {
+    "id": 3,
+    "type": "proverb",
+    "tags": ["caution", "secret"],
+    "source": {
+      "text": "낮말은 새가 듣고 밤말은 쥐가 듣는다.",
+      "romanization": "Nanmareun saega deutgo bammareun jwiga deunda.",
+      "author": null
+    },
+    "translations": {
+      "en": {
+        "text": "Birds hear the day's words, and rats hear the night's words.",
+        "meaning": "Be careful what you say; walls have ears."
+      },
+      "ja": {
+        "text": "壁に耳あり障子に目あり。",
+        "meaning": "秘密は漏れやすいから、いつでも言葉には気をつけなさい。"
+      },
+      "zh": {
+        "text": "隔墙有耳",
+        "meaning": "小心说话，秘密容易泄露。"
+      },
+      "es": {
+        "text": "Las paredes oyen.",
+        "meaning": "Ten cuidado con lo que dices; siempre hay alguien escuchando."
+      },
+      "fr": {
+        "text": "Les murs ont des oreilles.",
+        "meaning": "Faites attention à ce que vous dites; quelqu'un pourrait écouter."
+      },
+      "id": {
+        "text": "Dinding pun punya telinga.",
+        "meaning": "Berhati-hatilah dengan ucapanmu; rahasia mudah bocor."
+      },
+      "th": {
+        "text": "กำแพงมีหู ประตูมีช่อง",
+        "meaning": "ระวังคำพูด เพราะความลับไม่มีในโลก"
+      },
+      "vi": {
+        "text": "Tai vách mạch rừng.",
+        "meaning": "Hãy cẩn thận lời ăn tiếng nói; bí mật rất dễ bị lộ."
+      }
+    }
+  },
+  {
+    "id": 4,
+    "type": "proverb",
+    "tags": ["start", "courage"],
+    "source": {
+      "text": "시작이 반이다.",
+      "romanization": "Sijagi banida.",
+      "author": null
+    },
+    "translations": {
+      "en": {
+        "text": "Starting is half done.",
+        "meaning": "Starting is the hardest part. Once you start, you're halfway there."
+      },
+      "ja": {
+        "text": "始めが大事。",
+        "meaning": "物事は最初が肝心であり、始めてしまえば半分終わったようなものだ。"
+      },
+      "zh": {
+        "text": "好的开始是成功的一半。",
+        "meaning": "开始是最困难的。一旦开始，你就已经完成了一半。"
+      },
+      "es": {
+        "text": "Un buen comienzo es la mitad de la batalla.",
+        "meaning": "Empezar es la parte más difícil. Una vez que empiezas, ya estás a medio camino."
+      },
+      "fr": {
+        "text": "Une chose bien commencée est à demi achevée.",
+        "meaning": "Le plus dur, c'est de s'y mettre. Une fois lancé, c'est plus facile."
+      },
+      "id": {
+        "text": "Awal yang baik adalah setengah dari perjuangan.",
+        "meaning": "Memulai adalah bagian tersulit. Begitu Anda mulai, Anda sudah setengah jalan."
+      },
+      "th": {
+        "text": "การเริ่มต้นคือครึ่งหนึ่งของความสำเร็จ",
+        "meaning": "เริ่มต้นเป็นส่วนที่ยากที่สุด แต่เมื่อเริ่มแล้ว ก็เหมือนทำไปครึ่งทางแล้ว"
+      },
+      "vi": {
+        "text": "Vạn sự khởi đầu nan.",
+        "meaning": "Bắt đầu luôn là phần khó nhất. Nhưng khi đã bắt đầu, bạn đã đi được một nửa chặng đường."
+      }
+    }
+  },
+  {
+    "id": 5,
+    "type": "proverb",
+    "tags": ["savings", "patience"],
+    "source": {
+      "text": "티끌 모아 태산.",
+      "romanization": "Tikkeul moa taesan.",
+      "author": null
+    },
+    "translations": {
+      "en": {
+        "text": "Gathering dust to make a great mountain.",
+        "meaning": "Even small savings or efforts can build up to something huge over time."
+      },
+      "ja": {
+        "text": "塵も積もれば山となる。",
+        "meaning": "わずかなものでも、積もり積もれば高大なものとなる。"
+      },
+      "zh": {
+        "text": "积少成多。",
+        "meaning": "即使微小的储蓄或努力，长期累积也能成就巨大的成果。"
+      },
+      "es": {
+        "text": "De granito en granito, se hace un montoncito.",
+        "meaning": "Incluso los pequeños ahorros o esfuerzos pueden convertirse en algo enorme con el tiempo."
+      },
+      "fr": {
+        "text": "Les petits ruisseaux font les grandes rivières.",
+        "meaning": "De petites économies ou de petits efforts peuvent aboutir à quelque chose d'énorme."
+      },
+      "id": {
+        "text": "Sedikit demi sedikit, lama-lama menjadi bukit.",
+        "meaning": "Upaya atau tabungan kecil pun lama-kelamaan bisa menjadi sesuatu yang besar."
+      },
+      "th": {
+        "text": "เก็บเล็กผสมน้อย",
+        "meaning": "แม้แต่สิ่งเล็กน้อย หากสะสมไปนานๆ ก็จะเป็นสิ่งที่ยิ่งใหญ่ได้"
+      },
+      "vi": {
+        "text": "Kiến tha lâu cũng đầy tổ.",
+        "meaning": "Ngay cả những khoản tiết kiệm hoặc nỗ lực nhỏ cũng có thể tạo nên thành quả lớn theo thời gian."
+      }
+    }
+  }
+]
