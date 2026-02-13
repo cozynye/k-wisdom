@@ -1,8 +1,11 @@
 'use client';
 
+import { useRef } from 'react';
 import type { Proverb } from '@/types/proverb';
 import AudioButton from './AudioButton';
+import ShareCard from './ShareCard';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useShareCard } from '@/lib/useShareCard';
 
 interface DailyQuoteProps {
   proverb: Proverb;
@@ -11,6 +14,12 @@ interface DailyQuoteProps {
 export default function DailyQuote({ proverb }: DailyQuoteProps) {
   const { language } = useLanguage();
   const translation = proverb.translations[language];
+  const shareCardRef = useRef<HTMLDivElement>(null);
+  const { shareCard, isGenerating } = useShareCard();
+
+  const handleShare = () => {
+    shareCard(shareCardRef.current, proverb.source.text);
+  };
 
   return (
     <div className="fade-in space-y-8">
@@ -81,6 +90,23 @@ export default function DailyQuote({ proverb }: DailyQuoteProps) {
               ))}
             </div>
           )}
+
+          {/* 액션 버튼 - 카드 하단 */}
+          <div className="mt-8 pt-6 border-t border-gray-200/50 dark:border-gray-700/50 flex justify-center">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-electric-purple to-neon-cyan rounded-full opacity-0 group-hover:opacity-60 blur-lg transition-opacity duration-300" />
+              <button
+                onClick={handleShare}
+                disabled={isGenerating}
+                className="relative flex items-center gap-3 px-8 py-3 rounded-full bg-gradient-to-r from-electric-purple to-neon-cyan hover:from-neon-cyan hover:to-electric-purple text-white border-2 border-electric-purple/30 hover:border-neon-cyan transition-all duration-300 shadow-lg shadow-electric-purple/30 hover:shadow-xl hover:shadow-neon-cyan/50 active:scale-95 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed font-display font-semibold"
+                aria-label="Share quote as image"
+                title="이미지로 공유하기"
+              >
+                <span className="text-xl">{isGenerating ? '⏳' : '📤'}</span>
+                <span className="text-sm">이미지로 공유</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -88,6 +114,9 @@ export default function DailyQuote({ proverb }: DailyQuoteProps) {
       <p className="text-center text-xs font-body text-gray-400 dark:text-gray-600">
         Proverb #{proverb.id} of 5
       </p>
+
+      {/* Hidden ShareCard for image generation */}
+      <ShareCard ref={shareCardRef} proverb={proverb} translation={translation.text} />
     </div>
   );
 }
