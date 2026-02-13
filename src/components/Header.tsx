@@ -58,7 +58,7 @@ export default function Header() {
           <div className="flex items-center gap-2">
             {/* Language Dropdown - Modern */}
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-neon-pink/10 to-electric-purple/10 hover:from-neon-pink/20 hover:to-electric-purple/20 border border-neon-pink/20 dark:border-electric-purple/30 transition-all duration-300 hover:scale-105 focus:outline-none group">
+              <DropdownMenuTrigger className="h-10 flex items-center gap-2 px-4 rounded-full bg-gradient-to-r from-neon-pink/10 to-electric-purple/10 hover:from-neon-pink/20 hover:to-electric-purple/20 border border-neon-pink/20 dark:border-electric-purple/30 transition-all duration-300 hover:scale-105 focus:outline-none group">
                 <span className="text-lg">🌍</span>
                 <span className="text-sm font-display font-semibold text-gray-900 dark:text-white">
                   {LANGUAGE_CODES[language]}
@@ -103,7 +103,7 @@ export default function Header() {
             {/* Settings Button - Modern */}
             <button
               onClick={() => setIsSettingsOpen(true)}
-              className="p-2 rounded-full bg-gradient-to-r from-neon-pink/10 to-neon-cyan/10 hover:from-neon-pink/20 hover:to-neon-cyan/20 border border-neon-pink/20 dark:border-neon-cyan/30 transition-all duration-300 hover:scale-110 hover:rotate-90 group"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-neon-pink/10 to-neon-cyan/10 hover:from-neon-pink/20 hover:to-neon-cyan/20 border border-neon-pink/20 dark:border-neon-cyan/30 transition-all duration-300 hover:scale-110 hover:rotate-90 group"
               aria-label="Settings"
               title="설정"
             >
