@@ -140,8 +140,7 @@ export const metadata: Metadata = {
   },
   category: 'Education',
   verification: {
-    google: 'your-google-verification-code',
-    // Naver webmaster verification can be added here if needed
+    google: 'mJkJTBBd_7dbU9mLZXwirvRk_8r34RENokY5OZPTz4A',
   },
   other: {
     'mobile-web-app-capable': 'yes',
